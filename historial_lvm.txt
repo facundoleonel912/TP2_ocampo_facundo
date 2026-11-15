@@ -1,0 +1,146 @@
+    1  ssh-keygen -t ed25519
+    2  cat $HOME/.ssh/*.pub
+    3  mkdir repogit
+    4  cd repogit
+    5  git clone git@github.com:facundoleonel912/TP1_AySO_Ocampo_Facundo.git
+    6  cd TP1_AySO_Ocampo_Facundo/
+    7  pwd
+    8  ls -l
+    9  cat /etc/os-release
+   10  grep HOME_URL /etc/os-release
+   11  grep home_url /etc/os-release
+   12  grep -i home_url /etc/os-release
+   13  touch datos_url.txt
+   14  grep -i home_url /etc/os-release > datos_url.txt
+   15  id -un
+   16  echo Usuario=$(whoami) > datos_usuario.txt
+   17  git add .
+   18  git config --global user.email "facuocampo656@gmail.com"
+   19  git config --global user.name "facundoleonel912"
+   20  git commit -m "ADD: agregado 1er
+   21  ejercicio sobre datos_usuario.txt"
+   22  git status
+   23  git push
+   24  grep "model name" /proc/cpuinfo | head -n1 >>
+   25  datos_usuario.txt
+   26  grep "model name" /proc/cpuinfo | head -n1 >>
+   27  datos_usuario.txt
+   28  grep "model name" /proc/cpuinfo | head -n1 >>datos_usuario.txt
+   29  git add datos_usuario.txt
+   30  git commit -m "feat: Añadiendo información de CPU"
+   31  cat <<EOF >> README.md
+   32  Alumno: Facundo Ocampo
+   33  División: 113
+   34  Turno: Mañana
+   35  EOF
+   36  git add README.md datos_usuario.txt
+   37  git commit -m "ADD: Añadiendo Readme y datos de usuario"
+   38  git push
+   39  mkdir -p ~/materia{1,2}/uni{1,2,3}
+   40  sudo apt update
+   41  sudo apt install tree
+   42  exit
+   43  sudo apt install tree
+   44  mkdir -p ~/materia{1,2}/uni{1,2,3}
+   45  tree ~/materia1 ~/materia2
+   46  history -a
+   47  pdw
+   48  pwd
+   49  cd repogit
+   50  cd TP_AySO_Facundo_Ocampo
+   51  ls -l
+   52  cd TP1_AySO_Ocampo_Facundo
+   53  ls -l
+   54  cat datos_usuarios.txt
+   55  cat dato_usuari.txt
+   56  cat datos_usuario.txt
+   57  cat datos_usuario.txt 
+   58  cd
+   59  tree
+   60  sudo fdisk -l
+   61  n
+   62  lsblk
+   63  sudo apt update
+   64  sudo apt install -y lvm2 git
+   65  sudo apt install -y 1vm2 git
+   66  sudo apt install -y lvm2 git
+   67  sudo dpkg --configure -a
+   68  sudo apt install -y lvm2 git
+   69  git --version
+   70  sudo apt --fix-broken install -y
+   71  sudo apt install -y lvm2
+   72  sudo pvs
+   73  lsblk
+   74  sudo fdisk /dev/sdc
+   75  sudo fdisk /dev/sdb
+   76  sudo mkswap /dev/sdc1
+   77  sudo swapon /dev/sdc1
+   78  free -h
+   79  swapon -s
+   80  sudo wipefs -a /dev/sdc2
+   81  sudo wipefs -a /dev/sdc3
+   82  sudo wipefs -a /dev/sdc5
+   83  sudo wipefs -a /dev/sdc6
+   84  sudo wipefs -a /dev/sdb1
+   85  sudo wipefs -a /dev/sdb2
+   86  sudo pvcreate /dev/sdc2 /dev/sdc3 /dev/sdc5 /dev/sdc6 /dev/sdb1 /dev/sdb2
+   87  sudo pvs
+   88  sudo vgcreate vg_datos /dev/sdb1 /dev/sdc2
+   89  sudo vgcreate vg_web /dev/sdb2
+   90  sudo vgs
+   91  sudo pvs
+   92  sudo lvcreate -L 1G vg_web -n lv_web1
+   93  sudo lvcreate -L 512M vg_web -n lv_web2
+   94  sudo lvcreate -L 512M vg_web -n lv_web3
+   95  sudo lvs
+   96  sudo pvs
+   97  sudo fdisk -l
+   98  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   99  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+  100  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+  101  sudo mkswap /dev/sdc1
+  102  sudo swapon /dev/sdc1
+  103  free -h
+  104  swapon -s
+  105  sudo lvs
+  106  git clone https://github.com/TU_USUARIO/TP2_ocampo_facundo.git
+  107  cd TP2_ocampo_facundo
+  108  git clone https://github.com/facundoleonel912/TP2_ocampo_facundo.git
+  109  cd TP2_ocampo_facundo
+  110  lsblk
+  111  sudo mkdir -p /mnt/web1 /mnt/web2 /mnt/web3
+  112  sudo mount /dev/mapper/vg_web-lv_web1 /mnt/web1
+  113  sudo mount /dev/mapper/vg_web-lv_web2 /mnt/web2
+  114  sudo mount /dev/mapper/vg_web-lv_web3 /mnt/web3
+  115  df -h
+  116  lsblk
+  117  sudo blkid
+  118  sudo true
+  119  cat /etc/fstab
+  120  sudo cp /etc/fstab /etc/fstab.bak
+  121  echo "UUID=$(sudo blkid -s UUID -o value /dev/mapper/vg_web-lv_web1) /mnt/web1 ext4 defaults,nofail 0 2" | sudo tee -a /etc/fstab
+  122  echo "UUID=$(sudo blkid -s UUID -o value /dev/mapper/vg_web-lv_web2) /mnt/web2 ext4 defaults,nofail 0 2" | sudo tee -a /etc/fstab
+  123  echo "UUID=$(sudo blkid -s UUID -o value /dev/mapper/vg_web-lv_web3) /mnt/web3 ext4 defaults,nofail 0 2" | sudo tee -a /etc/fstab
+  124  echo "UUID=$(sudo blkid -s UUID -o value /dev/sdc1) none swap sw 0 0" | sudo tee -a /etc/fstab
+  125  cat /etc/fstab
+  126  sudo umount /mnt/web1 /mnt/web2 /mnt/web3
+  127  sudo mount -a
+  128  df -h
+  129  sudo swapoff /dev/sdc1
+  130  sudo swapon -a
+  131  swapon -s
+  132  sudo reboot
+  133  df -h
+  134  swapon -s
+  135  sudo systemctl daemon-reload
+  136  lsblk
+  137  sudo pvs
+  138  sudo vgs
+  139  sudo lvs
+  140  swapon -s
+  141  cd ~/TP2_ocampo_facundo
+  142  git pull origin main
+  143  sudo pvs > pvs.txt
+  144  sudo vgs > vgs.txt
+  145  sudo lvs > lvs.txt
+  146  history > historial_lvm.txt
