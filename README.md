@@ -1,7 +1,9 @@
 # TP2 – Memoria swap y LVM
 
 **Materia:** Arquitectura y Sistemas Operativos
+
 **Carrera:** Tecnicatura Universitaria en Programación – UTN Avellaneda
+
 **Alumno:** Facundo Ocampo
 
 ## Objetivo
